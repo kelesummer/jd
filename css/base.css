@@ -1,0 +1,115 @@
+/* css reset 样式重置*/
+* {
+  padding: 0;
+  margin: 0;
+  /*所有盒子布局采用内减模式*/
+  -webkit-box-sizing: border-box;
+  /* 兼容-webkit-内核浏览器 */
+  box-sizing: border-box;
+  /*去除移动端点击高亮颜色*/
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  /*后面的都是 备胎*/
+}
+ol,
+ul {
+  list-style: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: #333;
+}
+input {
+  border: none;
+  outline: none;
+  /* 在 移动端浏览器 表单可能会出现 阴影 高亮 3d效果,需要清除*/
+  -webkit-appearance: none;
+}
+/*commom css 公共样式*/
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+  height: 0;
+}
+[class^="icon-"] {
+  background-image: url(../images/sprites.png);
+  background-repeat: no-repeat;
+  /*背景尺寸*/
+  -webkit-background-size: 200px 200px;
+  background-size: 200px 200px;
+}
+.b-l {
+  border-left: 1px solid #ccc;
+}
+.b-r {
+  border-right: 1px solid #ccc;
+}
+.b-t {
+  border-top: 1px solid #ccc;
+}
+.b-b {
+  border-bottom: 1px solid #ccc;
+}
+.m-l10 {
+  margin-left: 10px;
+}
+.m-r10 {
+  margin-right: 10px;
+}
+/*公共个layout布局*/
+div[class$='layout'] {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+/*公共的头部样式*/
+.tool-bar {
+  height: 44px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 40px;
+  border-bottom: 1px solid #ccc;
+  background: url(../images/header-bg.png) repeat-x;
+  -webkit-background-size: 1px 44px;
+  background-size: 1px 44px;
+}
+.tool-bar .icon-back,
+.tool-bar .icon-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 44px;
+  background-position: -21px 0;
+  padding: 12px 10px;
+  /*背景原点*/
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  /*背景裁剪*/
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+.tool-bar .icon-menu {
+  left: auto;
+  right: 0;
+  background-position: -60px 0;
+}
